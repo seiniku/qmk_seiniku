@@ -1,6 +1,4 @@
-Layer 1
 
-    
        Q   W   F   P   G     |     J   L   U   Y   :
        A   R   S   T   D     |     H   N   E   I   O
        Z   X   C   V   B     |     K   M   <   >   ?
@@ -9,7 +7,7 @@ Layer 1
      
 
 
-Layer 2
+_RS
     
     
       !   @   {   }   |     |    PGU  8   8   9   *
@@ -20,8 +18,7 @@ Layer 2
      
 
 
-Layer 3
-
+_LW
     
        INS HOME UP END PGU   |    UP   F7   F8   F9   F10
        DEL LFT DWN RHT DWN   |    DWN  F4   F5   F6   F11
