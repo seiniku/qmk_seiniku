@@ -29,3 +29,4 @@ Layer 3
       ESC TAB SUP SFT BSPC   | SP/SFT  L0   .    0   RESET
                         CTRL   ALT
      
+Hold space for an extra shift key. Tap for a space.
