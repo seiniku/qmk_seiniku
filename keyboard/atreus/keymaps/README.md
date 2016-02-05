@@ -5,8 +5,8 @@ Layer 1
      *      Q   W   F   P   G     |     J   L    U   Y   :
      *      A   R   S   T   D     |     H   N    E   I   O
      *  SFT/Z   X   C   V   B     |     K   M    ,   -   SFT//
-     *     ESC TAB SUP SFT BSPC   |  SP/_RS _LW   -  '   ENT
-     *                   ESC/CTRL    ALT
+     *     ESC TAB SUP SFT BSPC   |  SP/_RS _LW  -  '   ENT
+     *                   ESC/CTRL    ENT/ALT
      *
      */
 
@@ -16,8 +16,8 @@ Layer 2
      *  !   @   {   }   |     |    PGU   8   8   9   *
      *  #   $   (   )   `     |    PGD   4   5   6   +
      *  %   ^   [   ]   ~     |     &    1   2   3   \
-     * ESC INS SUP SFT BSPC   |  SP/_RS _LW   .   0   =
-     *               ESC/CTRL    ALT
+     * ESC INS SUP SFT BSPC   |  SP/_RS _LW  .   0   =
+     *               ESC/CTRL    ENT/ALT
      */
 
 Layer 3
@@ -27,6 +27,6 @@ Layer 3
      *  DEL LFT DWN RHT DWN   |    DWN   F4   F5   F6   F11
      *   %   ^   [   ]   ~    |     &    F1   F2   F3   F12
      * CAD TAB SUP SFT BSPC   | SP/_RS  _LW   .    0   RESET
-     *               ESC/CTRL   ALT
+     *               ESC/CTRL   ENT/ALT
      */
 

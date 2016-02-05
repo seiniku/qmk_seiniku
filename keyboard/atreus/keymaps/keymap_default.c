@@ -19,14 +19,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      *      Q   W   F   P   G     |     J   L    U   Y   :
      *      A   R   S   T   D     |     H   N    E   I   O
      *  SFT/Z   X   C   V   B     |     K   M    ,   -   SFT//
-     *     ESC TAB SUP SFT BSPC   |  SP/_RS _LW   -  '   ENT  
-     *                   ESC/CTRL    ALT
+     *     ESC TAB SUP SFT BSPC   |  SP/_RS _LW  -  '   ENT  
+     *                   ESC/CTRL    ENT/ALT
      *
      */
 
   {KC_Q,         KC_W,   KC_F,    KC_P,    KC_G,    KC_TRNS,  KC_J,   KC_L,    KC_U,    KC_Y,    KC_SCLN},
   {KC_A,         KC_R,   KC_S,    KC_T,    KC_D,    KC_TRNS, KC_H,   KC_N,    KC_E,    KC_I,    KC_O},
-  {SFT_T(KC_Z), KC_X,    KC_C,    KC_V,    KC_B,    KC_LALT, KC_K,   KC_M,    KC_COMM, KC_DOT,  SFT_T(KC_SLSH)},
+  {SFT_T(KC_Z), KC_X,    KC_C,    KC_V,    KC_B,    ALT_T(KC_ENT), KC_K,   KC_M,    KC_COMM, KC_DOT,  SFT_T(KC_SLSH)},
   {KC_ESC,      KC_TAB, KC_LGUI,  KC_LSFT, KC_BSPC, CTL_T(KC_ESC), LT(_RS, KC_SPC), MO(_LW), KC_MINS, KC_QUOT, KC_ENT}
    
 },
@@ -39,7 +39,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      *  #   $   (   )   `     |    PGD   4   5   6   +
      *  %   ^   [   ]   ~     |     &    1   2   3   \
      * ESC INS SUP SFT BSPC   |  SP/_RS _LW  .   0   =  
-     *               ESC/CTRL    ALT
+     *               ESC/CTRL    ENT/ALT
      */
 
   {KC_EXLM, KC_AT,   KC_LCBR, KC_RCBR, KC_PIPE, KC_TRNS, KC_PGUP, KC_7,    KC_8,   KC_9, KC_ASTR},
@@ -56,7 +56,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      *  DEL LFT DWN RHT DWN   |    DWN   F4   F5   F6   F11
      *   %   ^   [   ]   ~    |     &    F1   F2   F3   F12
      * CAD TAB SUP SFT BSPC   | SP/_RS  _LW   .    0   RESET  
-     *               ESC/CTRL   ALT
+     *               ESC/CTRL   ENT/ALT
      */
 
   {KC_INS,  KC_HOME, KC_UP,   KC_END,  KC_PGUP, KC_TRNS, KC_UP,   KC_F7,   KC_F8,   KC_F9,   KC_F10},
