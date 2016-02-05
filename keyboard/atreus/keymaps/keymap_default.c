@@ -38,7 +38,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      *  !   @   {   }   |     |    PGU   8   8   9   *
      *  #   $   (   )   `     |    PGD   4   5   6   +
      *  %   ^   [   ]   ~     |     &    1   2   3   \
-     * ESC INS SUP SFT BSPC   |  SP/_RS _LW   -   0   =  
+     * ESC INS SUP SFT BSPC   |  SP/_RS _LW  .   0   =  
      *               ESC/CTRL    ALT
      */
 
