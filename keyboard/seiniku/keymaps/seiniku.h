@@ -29,11 +29,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "debug.h"
 #include "keymap.h"
 
-#define SHIFT(key) ACTION(ACT_MODS, (MOD_LSFT << 8) | (key))
-#define CTRL(key) ACTION(ACT_MODS, (MOD_LCTL << 8) | (key))
-#define ALT(key) ACTION(ACT_MODS, (MOD_LALT << 8) | (key))
-#define GUI(key) ACTION(ACT_MODS, (MOD_LGUI << 8) | (key))
-
 extern const uint16_t keymaps[][MATRIX_ROWS][MATRIX_COLS];
 extern const uint16_t fn_actions[];
 
@@ -58,7 +53,7 @@ extern const uint16_t fn_actions[];
  *
  */
 
-#define FN_LAYER   KEYMAP(SHIFT(KC_1), SHIFT(KC_2), SHIFT(KC_LBRC), SHIFT(KC_RBRC), SHIFT(KC_BSLS), \
+/*#define FN_LAYER   KEYMAP(SHIFT(KC_1), SHIFT(KC_2), SHIFT(KC_LBRC), SHIFT(KC_RBRC), SHIFT(KC_BSLS), \
                             KC_PGUP, KC_7, KC_8, KC_9, SHIFT(KC_8),       \
                           SHIFT(KC_3), SHIFT(KC_4), SHIFT(KC_9), SHIFT(KC_0), KC_GRAVE, \
                             KC_PGDN, KC_4, KC_5, KC_6, SHIFT(KC_EQUAL),   \
@@ -67,25 +62,26 @@ extern const uint16_t fn_actions[];
                           KC_FN1, SHIFT(KC_INS), KC_LGUI, KC_LCTRL, KC_LSFT, KC_BSPC, KC_SPC, \
                             KC_FN0, KC_LALT, KC_DOT, KC_0, KC_EQUAL)
 
+*/
 
 /*
  *  FN_ARROW_LAYER
- *  1    2    up   -    =       ||       pgu  7    8    9    8
- *  3   lft  dwn  rit   4       ||       pgd  4    5    6    ]
- *  -    =    9    0    7       ||       `    1    2    3    \
- * esc tab meta ctrl shift bksp || space fn0  alt  e    0    ]
+ *  !    @    up   {    }       ||       pgu  7    8    9    *
+ *  #   lft  dwn  rit   $       ||       pgd  4    5    6    +
+ *  [    ]    (    )    &       ||       `    1    2    3    \
+ * esc tab meta ctrl shift bksp || space fn0  alt  .    0    =
  *
  */
 
 
-#define FN_ARROW_LAYER   KEYMAP(SHIFT(KC_1), SHIFT(KC_2), KC_UP, SHIFT(KC_MINS), SHIFT(KC_EQUAL), \
-                                  KC_PGUP, KC_7, KC_8, KC_9, SHIFT(KC_8), \
-                                SHIFT(KC_3), KC_LEFT, KC_DOWN, KC_RIGHT, SHIFT(KC_4), \
-                                  KC_PGDN, KC_4, KC_5, KC_6, SHIFT(KC_RBRC), \
-                                KC_MINS, KC_EQUAL, SHIFT(KC_9), SHIFT(KC_0), SHIFT(KC_7), \
+#define FN_ARROW_LAYER   KEYMAP(KC_EXLM, KC_AT, KC_UP, KC_LCBR, KC_RCBR, \
+                                  KC_PGUP, KC_7, KC_8, KC_9, KC_ASTR, \
+                                KC_HASH, KC_LEFT, KC_DOWN, KC_RIGHT, KC_DLR, \
+                                  KC_PGDN, KC_4, KC_5, KC_6, KC_PLUS, \
+                                KC_LBRC, KC_RBRC, KC_LPRN, KC_RPRN, KC_AMPR, \
                                   KC_GRAVE, KC_1, KC_2, KC_3, KC_BSLS,    \
-                                KC_FN1, SHIFT(KC_INS), KC_LGUI, KC_LCTRL, KC_LSFT, KC_BSPC, KC_SPC, \
-                                  KC_FN0, KC_LALT, KC_E, KC_0, KC_RBRC)
+                                KC_FN1, KC_INS, KC_LGUI, KC_LCTRL, KC_LSFT, KC_BSPC, KC_SPC, \
+                                  KC_FN0, KC_LALT, KC_DOT, KC_0, KC_EQUAL)
 
 
 /*
@@ -101,7 +97,7 @@ extern const uint16_t fn_actions[];
 #define LAYER_TWO KEYMAP(KC_INS, KC_HOME, KC_UP, KC_END, KC_PGUP, KC_UP, KC_F7, KC_F8, KC_F9, KC_F10, \
                          KC_DEL, KC_LEFT, KC_DOWN, KC_RIGHT, KC_PGDN, KC_DOWN, KC_F4, KC_F5, KC_F6, KC_F11, \
                          KC_FN4, KC_VOLU, KC_NO, KC_NO, KC_FN3, KC_NO, KC_F1, KC_F2, KC_F3, KC_F12, \
-                         KC_NO, KC_VOLD, KC_LGUI, KC_LCTRL, KC_LSFT, KC_BSPC, KC_SPC, KC_FN2, KC_LALT, KC_PSCREEN, KC_SLCK, KC_PAUSE)
+                         KC_NO, KC_VOLD, KC_LGUI, KC_LCTRL, KC_LSFT, KC_BSPC, KC_SPC, KC_FN2, KC_LALT, KC_PSCREEN, KC_SLCK, RESET)
 
 enum function_id {
   BOOTLOADER,
@@ -110,3 +106,4 @@ enum function_id {
 void bootloader(void);
 
 #endif
+

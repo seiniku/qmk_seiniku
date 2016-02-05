@@ -1,4 +1,4 @@
-#include "keymap_common.h"
+#include "seiniku.h"
 
 /* This layout implements colemak in the firmware, so you don't have to
    set the OS configuration into colemak layout. Useful if you don't have
@@ -36,9 +36,24 @@ const uint16_t PROGMEM fn_actions[] = {
   [5] = ACTION_MODS_TAP_KEY(MOD_LSFT, KC_SPC)
 };
 
-void action_function(keyrecord_t *record, uint8_t id, uint8_t opt)
+/*void action_function(keyrecord_t *record, uint8_t id, uint8_t opt)
 {
   if (id == BOOTLOADER) {
     bootloader();
   }
 }
+*/
+const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt)
+{
+  // MACRODOWN only works in this function
+      switch(id) {
+        case 0:
+          if (record->event.pressed) {
+            register_code(KC_RSFT);
+          } else {
+            unregister_code(KC_RSFT);
+          }
+        break;
+      }
+    return MACRO_NONE;
+};

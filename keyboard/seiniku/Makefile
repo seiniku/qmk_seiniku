@@ -27,7 +27,7 @@
 # make flip-ee = Download the eeprom file to the device, using Atmel FLIP
 #                (must have Atmel FLIP installed).
 #
-# make debug = Start either simulavr or avarice as specified for debugging,
+# make debug = Start either simulavr or avarice as specified for debugging, 
 #              with avr-gdb or avr-insight as the front end for debugging.
 #
 # make filename.s = Just compile filename.c into the assembler code only.
@@ -38,28 +38,27 @@
 # To rebuild project do "make clean" then "make all".
 #----------------------------------------------------------------------------
 
-# Set to /dev/cu.usbmodem1421 or whatever on Macs
-USB ?= /dev/ttyACM0
-
 # Target file name (without extension).
 TARGET = atreus
 
+
 # Directory common source filess exist
-TOP_DIR = ../../tmk_core
+TOP_DIR = ../..
 TMK_DIR = ../../tmk_core
+
 # Directory keyboard dependent files exist
 TARGET_DIR = .
 
-# project specific files
-SRC =	keymap_common.c \
-	matrix.c \
-	led.c
+# # project specific files
+SRC = atreus.c
 
-KEYMAP ?= qwerty
-SRC := keymap_$(KEYMAP).c $(SRC)
+ifdef KEYMAP
+    SRC := keymaps/keymap_$(KEYMAP).c $(SRC)
+else
+    SRC := keymaps/keymap_default.c $(SRC)
+endif
 
 CONFIG_H = config.h
-
 
 # MCU name
 #MCU = at90usb1287
@@ -108,22 +107,25 @@ OPT_DEFS += -DINTERRUPT_CONTROL_ENDPOINT
 #   Atmel DFU loader 4096
 #   LUFA bootloader  4096
 #   USBaspLoader     2048
-OPT_DEFS += -DBOOTLOADER_SIZE=512
+OPT_DEFS += -DBOOTLOADER_SIZE=4096
 
 
 # Build Options
 #   comment out to disable the options.
 #
- BOOTMAGIC_ENABLE = yes	# Virtual DIP switch configuration(+1000)
-# MOUSEKEY_ENABLE = yes	# Mouse keys(+4700)
-EXTRAKEY_ENABLE = yes	# Audio control and System control(+450)
+#BOOTMAGIC_ENABLE = yes	# Virtual DIP switch configuration(+1000)
+#MOUSEKEY_ENABLE = yes	# Mouse keys(+4700)
+#EXTRAKEY_ENABLE = yes	# Audio control and System control(+450)
 CONSOLE_ENABLE = yes	# Console for debug(+400)
 COMMAND_ENABLE = yes    # Commands for debug and configuration
+# Do not enable SLEEP_LED_ENABLE. it uses the same timer as BACKLIGHT_ENABLE
 # SLEEP_LED_ENABLE = yes  # Breathing sleep LED during USB suspend
-NKRO_ENABLE = yes	# USB Nkey Rollover - not yet supported in LUFA
+NKRO_ENABLE = yes		# USB Nkey Rollover - not yet supported in LUFA
+# BACKLIGHT_ENABLE = yes  # Enable keyboard backlight functionality
+# MIDI_ENABLE = YES 		# MIDI controls
+UNICODE_ENABLE = YES 		# Unicode
+# BLUETOOTH_ENABLE = yes # Enable Bluetooth with the Adafruit EZ-Key HID
 
-# Causes trouble on low voltage chipsets.
-OPT_DEFS += -DNO_SUSPEND_POWER_DOWN
 
 # Optimize size but this may cause error "relocation truncated to fit"
 #EXTRALDFLAGS = -Wl,--relax
@@ -131,20 +133,7 @@ OPT_DEFS += -DNO_SUSPEND_POWER_DOWN
 # Search Path
 VPATH += $(TARGET_DIR)
 VPATH += $(TOP_DIR)
+VPATH += $(TMK_DIR)
 
-# TODO: this is dumb and redundant
-OPT_DEFS += -DTEENSY -DBOOTLOADER_SIZE=512
-
-build: $(TARGET).hex
-
-upload: build
-	while [ ! -r $(USB) ]; do sleep 1; done; \
-	avrdude -p $(MCU) -c avr109 -U flash:w:$(TARGET).hex -P $(USB)
-
-include $(TOP_DIR)/protocol/lufa.mk
-include $(TOP_DIR)/common.mk
-include $(TOP_DIR)/rules.mk
-
-udev:
-	cp a-star.rules /etc/udev/rules.d/
+include $(TOP_DIR)/quantum/quantum.mk
 
