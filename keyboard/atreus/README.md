@@ -1,10 +1,6 @@
 atreus keyboard firmware
 ======================
 
-## Note
-
-This is for the Teensy2 hand wired boards only.
-
 ## Quantum MK Firmware
 
 You have access to a bunch of goodies! Check out the Makefile to enable/disable some of the features. Uncomment the `#` to enable them. Setting them to `no` does nothing and will only confuse future you.
@@ -13,6 +9,12 @@ You have access to a bunch of goodies! Check out the Makefile to enable/disable 
     MIDI_ENABLE = yes      # MIDI controls
     # UNICODE_ENABLE = yes # Unicode support - this is commented out, just as an example. You have to use #, not //
     BLUETOOTH_ENABLE = yes # Enable Bluetooth with the Adafruit EZ-Key HID
+
+## Atreus specific information
+
+These configuration files are specifically for the Atreus keyboards created by Phil Hagelberg (@technomancy). This keyboard is available in two variants: one powered by a Teensy 2, one powered by an A-Star. This repository currently assumes that you have an A-Star powered Atreus. If you are using a Teensy2, specify that by adding `TEENSY2=yes` to your `make` commands.
+
+If you are coming from the [atreus-firmware](https://github.com/technomancy/atreus-firmware), we've also brought forward the `make upload` command for you to use.
 
 ## Quick aliases to common actions
 
@@ -175,10 +177,10 @@ Depending on which keymap you would like to use, you will have to compile slight
 To build with the default keymap, simply run `make`.
 
 ### Other Keymaps
-Several version of keymap are available in advance but you are recommended to define your favorite layout yourself. To define your own keymap create file named `keymap_<name>.c` and see keymap document (you can find in top README.md) and existent keymap files.
+Several version of keymap are available in advance but you are recommended to define your favorite layout yourself. To define your own keymap create file named `<name>.c` and see keymap document (you can find in top README.md) and existent keymap files.
 
 To build the firmware binary hex file with a keymap just do `make` with `KEYMAP` option like:
 ```
 $ make KEYMAP=[default|jack|<name>]
 ```
-Keymaps follow the format **__keymap\_\<name\>.c__** and are stored in the `keymaps` folder.
+Keymaps follow the format **__\<name\>.c__** and are stored in the `keymaps` folder.
