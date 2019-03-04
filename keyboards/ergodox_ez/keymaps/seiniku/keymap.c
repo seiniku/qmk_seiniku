@@ -34,19 +34,19 @@ enum custom_keycodes {
  */
 // 7 7 6 7 5 3 3 7 7 6 7 5 3 3
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-  [0] = LAYOUT_ergodox(KC_EQUAL,KC_1,KC_2,KC_3,KC_4,KC_5,KC_LEFT,
+  [0] = LAYOUT_ergodox(KC_GESC,KC_1,KC_2,KC_3,KC_4,KC_5,KC_LEFT,
                       KC_DELETE,KC_Q,KC_W,KC_F,KC_P,KC_G,TG(2),
-                      LCTL_T(KC_ESCAPE),KC_A,KC_R,KC_S,KC_T,KC_D,
-                      KC_LSHIFT,SFT_T(KC_Z),KC_X,KC_C,KC_V,KC_B,KC_HYPR,
+                      LCTL_T(KC_GESC),KC_A,KC_R,KC_S,KC_T,KC_D,
+                      KC_LSPO,SFT_T(KC_Z),KC_X,KC_C,KC_V,KC_B,KC_HYPR,
                       LT(1,KC_GRAVE),KC_LBRACKET,KC_TAB,KC_LEFT,KC_RIGHT,
 
                       LALT_T(KC_APPLICATION),KC_LGUI,KC_HOME,
                       KC_BSPACE,LCTL_T(KC_ESCAPE),KC_END,
 
-                      KC_RIGHT,KC_6,KC_7,KC_8,KC_9,KC_0,KC_MINUS,
+                      KC_RIGHT,KC_6,KC_7,KC_8,KC_9,KC_0,KC_EQUAL,
                       TG(1),KC_J,KC_L,KC_U,KC_Y,KC_SCOLON,KC_BSLASH,
                       KC_H,KC_N,KC_E,KC_I,KC_O,LGUI_T(KC_QUOTE),
-                      KC_MEH,KC_K,KC_M,KC_COMMA,KC_DOT,SFT_T(KC_SLSH),KC_RSHIFT,
+                      KC_MEH,KC_K,KC_M,KC_COMMA,KC_DOT,SFT_T(KC_SLSH),KC_RSPC,
                       MO(2),KC_MINUS,KC_QUOTE,KC_RBRACKET,MO(1),
 
                       LCTL(LALT(KC_DEL)),LCTL_T(KC_ESCAPE),KC_PGUP,
@@ -58,7 +58,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                        KC_TRANSPARENT,KC_PERC,KC_CIRC,KC_LBRACKET,KC_RBRACKET,KC_TILD,KC_TRANSPARENT,
                        KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,
 
-                       RGB_MOD,KC_TRANSPARENT,KC_TRANSPARENT,
+                       VLK_TOG,RGB_MODE_BREATHE,RGB_MODE_REVERSE,
                        RGB_VAD,RGB_VAI,KC_TRANSPARENT,
 
                        KC_TRANSPARENT,KC_F6,KC_F7,KC_F8,KC_F9,KC_F10,KC_F11,
