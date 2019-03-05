@@ -35,7 +35,7 @@ enum custom_keycodes {
 // 7 7 6 7 5 3 3 7 7 6 7 5 3 3
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_ergodox(KC_GESC,KC_1,KC_2,KC_3,KC_4,KC_5,KC_LEFT,
-                      KC_DELETE,KC_Q,KC_W,KC_F,KC_P,KC_G,TG(2),
+                      KC_TAB,KC_Q,KC_W,KC_F,KC_P,KC_G,TG(2),
                       LCTL_T(KC_GESC),KC_A,KC_R,KC_S,KC_T,KC_D,
                       KC_LSPO,SFT_T(KC_Z),KC_X,KC_C,KC_V,KC_B,KC_HYPR,
                       LT(1,KC_GRAVE),KC_LBRACKET,KC_TAB,KC_LEFT,KC_RIGHT,
