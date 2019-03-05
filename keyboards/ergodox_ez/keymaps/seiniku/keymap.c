@@ -14,23 +14,23 @@ enum custom_keycodes {
 
 };
 /*
-[1] = LAYOUT_ergodox(KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,
-                       KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,
-                       KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,
-                       KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,
-                       KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,
+[1] = LAYOUT_ergodox(_______,_______,_______,_______,_______,_______,_______,
+                       _______,_______,_______,_______,_______,_______,_______,
+                       _______,_______,_______,_______,_______,_______,
+                       _______,_______,_______,_______,_______,_______,_______,
+                       _______,_______,_______,_______,_______,
 
-                       KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,
-                       KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,
+                       _______,_______,_______,
+                       _______,_______,_______,
 
-                       KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,
-                       KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,
-                       KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,
-                       KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,
-                       KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,
+                       _______,_______,_______,_______,_______,_______,_______,
+                       _______,_______,_______,_______,_______,_______,_______,
+                       _______,_______,_______,_______,_______,_______,
+                       _______,_______,_______,_______,_______,_______,_______,
+                       _______,_______,_______,_______,_______,
 
-                       KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,
-                       KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT),
+                       _______,_______,_______,
+                       _______,_______,_______),
  */
 // 7 7 6 7 5 3 3 7 7 6 7 5 3 3
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -52,43 +52,43 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                       LCTL(LALT(KC_DEL)),LCTL_T(KC_ESCAPE),KC_PGUP,
                       KC_PGDOWN,RALT_T(KC_ENTER),KC_SPACE),
 
-  [1] = LAYOUT_ergodox(KC_ESCAPE,KC_F1,KC_F2,KC_F3,KC_F4,KC_F5,KC_TRANSPARENT,
-                       KC_TRANSPARENT,KC_EXLM,KC_AT,KC_LCBR,KC_RCBR,KC_PIPE,KC_TRANSPARENT,
-                       KC_TRANSPARENT,KC_HASH,KC_DLR,KC_LPRN,KC_RPRN,KC_GRAVE,
-                       KC_TRANSPARENT,KC_PERC,KC_CIRC,KC_LBRACKET,KC_RBRACKET,KC_TILD,KC_TRANSPARENT,
-                       KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,
+  [1] = LAYOUT_ergodox(KC_ESCAPE,KC_F1,KC_F2,KC_F3,KC_F4,KC_F5,_______,
+                       _______,KC_EXLM,KC_AT,KC_LCBR,KC_RCBR,KC_PIPE,_______,
+                       _______,KC_HASH,KC_DLR,KC_LPRN,KC_RPRN,KC_GRAVE,
+                       _______,KC_PERC,KC_CIRC,KC_LBRACKET,KC_RBRACKET,KC_TILD,_______,
+                       _______,_______,_______,_______,_______,
 
 
-                       KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,
-                       KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,
+                       _______,_______,_______,
+                       _______,_______,_______,
 
-                       KC_TRANSPARENT,KC_F6,KC_F7,KC_F8,KC_F9,KC_F10,KC_F11,
-                       KC_TRANSPARENT,KC_UP,KC_7,KC_8,KC_9,KC_ASTR,KC_F12,
-                       KC_DOWN,KC_4,KC_5,KC_6,KC_PLUS,KC_TRANSPARENT,
-                       KC_TRANSPARENT,KC_AMPR,KC_1,KC_2,KC_3,KC_BSLASH,KC_MINUS,
+                       _______,KC_F6,KC_F7,KC_F8,KC_F9,KC_F10,KC_F11,
+                       _______,KC_UP,KC_7,KC_8,KC_9,KC_ASTR,KC_F12,
+                       KC_DOWN,KC_4,KC_5,KC_6,KC_PLUS,_______,
+                       _______,KC_AMPR,KC_1,KC_2,KC_3,KC_BSLASH,KC_MINUS,
                        KC_0,KC_DOT,KC_0,KC_EQUAL,KC_EQL,
 
-                       KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,
-                       KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT),
+                       _______,_______,_______,
+                       _______,_______,_______),
 
 
-  [2] = LAYOUT_ergodox(KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,
-                       KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,
-                       KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,
-                       KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,
-                       KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,
+  [2] = LAYOUT_ergodox(_______,_______,_______,_______,_______,_______,_______,
+                       _______,_______,_______,_______,_______,_______,_______,
+                       _______,_______,_______,_______,_______,_______,
+                       _______,_______,_______,_______,_______,_______,_______,
+                       _______,_______,_______,_______,_______,
 
                        RGB_TOG,RGB_MODE_FORWARD,RGB_MODE_REVERSE,
-                       RGB_VAD,RGB_VAI,KC_TRANSPARENT,
+                       RGB_VAD,RGB_VAI,_______,
 
-                       KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,
-                       KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,
-                       KC_TRANSPARENT,KC_LEFT,KC_DOWN,KC_UP,KC_RIGHT,KC_TRANSPARENT,
-                       KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,
-                       KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,
+                       _______,_______,_______,_______,_______,_______,_______,
+                       _______,_______,_______,_______,_______,_______,_______,
+                       _______,KC_LEFT,KC_DOWN,KC_UP,KC_RIGHT,_______,
+                       _______,_______,_______,_______,_______,_______,_______,
+                       _______,_______,_______,_______,_______,
 
-                       RGB_TOG,RGB_SLD,KC_TRANSPARENT,
-                       KC_TRANSPARENT,RGB_HUD,RGB_HUI),
+                       RGB_TOG,RGB_SLD,_______,
+                       _______,RGB_HUD,RGB_HUI),
 
 };
 
